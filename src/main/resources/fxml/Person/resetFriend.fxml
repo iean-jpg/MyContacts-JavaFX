@@ -1,37 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.*?>
+<VBox prefHeight="348.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.resetFriendController">
     <children>
-        <Pane prefHeight="500.0" prefWidth="600.0">
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="340.0" prefWidth="315.0" VBox.vgrow="ALWAYS">
             <children>
-                <Label layoutX="238.0" layoutY="32.0" text="好友信息">
+                <Button fx:id="getButton" layoutX="36.0" layoutY="290.0" mnemonicParsing="false" onAction="#getPerson" prefHeight="30.0" prefWidth="69.0" text="查 询" />
+                <Button fx:id="postButton" layoutX="123.0" layoutY="290.0" mnemonicParsing="false" onAction="#post" prefHeight="30.0" prefWidth="69.0" text="修 改" />
+                <Button fx:id="exitButton" layoutX="215.0" layoutY="290.0" mnemonicParsing="false" onAction="#onExit" prefHeight="30.0" prefWidth="69.0" text="取 消" />
+                <Label layoutX="26.0" layoutY="20.0" prefHeight="30.0" prefWidth="57.0" text="姓名：">
                     <font>
-                        <Font size="31.0" />
+                        <Font size="14.0" />
                     </font>
                 </Label>
-                <Label layoutX="42.0" layoutY="109.0" text="姓名：" />
-                <Label layoutX="42.0" layoutY="169.0" text="手机：" />
-                <Label layoutX="42.0" layoutY="218.0" text="电话：" />
-                <Label layoutX="42.0" layoutY="273.0" text="地址：" />
-                <Label layoutX="42.0" layoutY="326.0" text="归属组：" />
-                <Label layoutX="42.0" layoutY="377.0" text="性别" />
-                <TextField layoutX="199.0" layoutY="104.0" />
-                <TextField layoutX="199.0" layoutY="154.0" />
-                <TextField layoutX="199.0" layoutY="213.0" />
-                <TextField layoutX="199.0" layoutY="268.0" />
-                <ChoiceBox layoutX="199.0" layoutY="321.0" prefWidth="150.0" />
-                <RadioButton layoutX="157.0" layoutY="377.0" mnemonicParsing="false" text="男" />
-                <RadioButton layoutX="342.0" layoutY="377.0" mnemonicParsing="false" text="母" />
-                <Button layoutX="102.0" layoutY="435.0" mnemonicParsing="false" text="修改" />
-                <Button layoutX="384.0" layoutY="435.0" mnemonicParsing="false" text="取消" />
-            </children>
-        </Pane>
+                <Label layoutX="26.0" layoutY="66.0" prefHeight="30.0" prefWidth="57.0" text="手机：">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="26.0" layoutY="112.0" prefHeight="30.0" prefWidth="57.0" text="地址：">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="26.0" layoutY="164.0" prefHeight="30.0" prefWidth="57.0" text="归属组：">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <ChoiceBox fx:id="belongGroup" layoutX="101.0" layoutY="168.0" prefHeight="23.0" prefWidth="157.0" />
+                <TextField fx:id="nameText" layoutX="85.0" layoutY="24.0" prefHeight="23.0" prefWidth="177.0" />
+                <TextField fx:id="phoneText" layoutX="85.0" layoutY="70.0" prefHeight="23.0" prefWidth="177.0" />
+                <TextField fx:id="addressText" layoutX="85.0" layoutY="116.0" prefHeight="23.0" prefWidth="177.0" />
+                <Label layoutX="26.0" layoutY="224.0" prefHeight="30.0" prefWidth="57.0" text="性别：">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <RadioButton fx:id="manChoice" layoutX="85.0" layoutY="231.0" mnemonicParsing="false" text="男">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </RadioButton>
+                <RadioButton fx:id="womenChoice" layoutX="160.0" layoutY="231.0" mnemonicParsing="false" text="女">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </RadioButton>
+            </children></AnchorPane>
     </children>
 </VBox>

@@ -3,7 +3,10 @@ package controller;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ContextMenu;
 import javafx.scene.control.TreeItem;
@@ -112,7 +115,14 @@ public class MainController implements Initializable {
             e.printStackTrace();
         }
     }
-
+    @FXML
+    public void about(ActionEvent event){
+        try{
+            new aboutController().start(new Stage());
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
     @FXML
     public void resetFriend(ActionEvent event){
         try{

@@ -22,7 +22,7 @@
         where GroupID = #{GroupID}
     </update>
     <select id="getGroupNameByID" resultType="java.lang.String" parameterType="int">
-        select GrouopName from `group` where GroupID = #{GroupID}
+        select GroupName from `group` where GroupID = #{GroupID}
     </select>
     <delete id="delGroupByName" parameterType="java.lang.String">
         delete from `group` where GroupName = #{GroupName}
