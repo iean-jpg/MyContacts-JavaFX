@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.PersonMapper">
+    <select id="getAllPerson" resultType="Person">
+        select *
+        from person
+    </select>
+
+    <insert id="addPerson" parameterType="Person">
+        insert into person(PersonName, PersonPhone, PersonCall, PersonAddress, PGId,PersonSex)
+        values (#{PersonName}, #{PersonPhone}, #{PersonCall}, #{PersonAddress}, #{PGId},#{PersonSex});
+    </insert>
+    <delete id="delPersonByName" parameterType="java.lang.String">
+        delete
+        from person
+        where PersonName = #{PersonName}
+    </delete>
+    <update id="updatePersonByName" parameterType="Person">
+        update person
+        set PersonName    = #{PersonName},
+            PersonPhone   = #{PersonPhone},
+            PersonCall   = #{PersonCall},
+            PersonAddress = #{PersonAddress},
+            PersonSex     = #{PersonSex},
+            PGId    = #{PGId}
+        where PersonName = #{PersonName}
+    </update>
+    <select id="getPersonByName" parameterType="java.lang.String" resultType="Person">
+        select *
+        from person
+        where PersonName = #{PersonName}
+    </select>
+    <delete id="delPersonByGroupID" parameterType="int">
+        delete
+        from person
+        where PGId = #{PGId}
+    </delete>
+</mapper>

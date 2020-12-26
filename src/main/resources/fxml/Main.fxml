@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox fx:controller="controller.MainController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="446.0" prefWidth="289.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TitledPane animated="false" prefHeight="464.0" prefWidth="289.0" text="通讯录">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Pane layoutY="-2.0" prefHeight="419.0" prefWidth="289.0">
+                     <children>
+                        <MenuBar layoutY="-2.0" prefHeight="32.0" prefWidth="289.0">
+                          <menus>
+                            <Menu mnemonicParsing="false" text="组操作">
+                              <items>
+                                <MenuItem fx:id="addGroup" onAction="#addGroup" mnemonicParsing="false" text="添加组" />
+                                    <MenuItem fx:id="delGroup" onAction="#delGroup" mnemonicParsing="false" text="删除组" />
+                                    <MenuItem fx:id="resetGroup" onAction="#resetGroup" mnemonicParsing="false" text="修改组名" />
+                                    <MenuItem mnemonicParsing="false" text="退出" />
+                              </items>
+                            </Menu>
+                            <Menu mnemonicParsing="false" text="好友操作">
+                              <items>
+                                <MenuItem fx:id="findFriend" onAction="#findFriend" mnemonicParsing="false" text="查询好友" />
+                                    <MenuItem fx:id="addFriend" onAction="#addFriend" mnemonicParsing="false" text="添加好友" />
+                                    <MenuItem fx:id="resetFriend" onAction="#resetFriend" mnemonicParsing="false" text="修改好友" />
+                                    <MenuItem fx:id="delFriend" onAction="#delFriend" mnemonicParsing="false" text="删除好友" />
+                              </items>
+                            </Menu>
+                            <Menu mnemonicParsing="false" text="帮助">
+                              <items>
+                                <MenuItem mnemonicParsing="false" text="关于" />
+                              </items>
+                            </Menu>
+                          </menus>
+                        </MenuBar>
+                        <TreeView fx:id="tree" layoutX="21.0" layoutY="52.0" prefHeight="313.0" prefWidth="246.0"/>
+                        <Button fx:id="refresh" onAction="#refresh" layoutX="50.0" layoutY="375.0" mnemonicParsing="false" text="刷新" />
+                        <Button fx:id="quit" onAction="#quit" layoutX="166.0" layoutY="375.0" mnemonicParsing="false" text="退出" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</VBox>

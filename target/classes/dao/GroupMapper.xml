@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.GroupMapper">
+    <select id="getAllGroup" resultType="Group">
+        select *
+        from `group`
+    </select>
+    <insert id="addGroup" parameterType="Group">
+        insert into `group` (GroupName)
+        values (#{GroupName})
+    </insert>
+
+    <select id="getGroupByName" parameterType="String" resultType="Group">
+        select * from `group` where GroupName = #{GroupName}
+    </select>
+    <update id="updateGroupByID" parameterType="Group">
+        update `group`
+        set GroupName = #{GroupName}
+        where GroupID = #{GroupID}
+    </update>
+    <select id="getGroupNameByID" resultType="java.lang.String" parameterType="int">
+        select GrouopName from `group` where GroupID = #{GroupID}
+    </select>
+    <delete id="delGroupByName" parameterType="java.lang.String">
+        delete from `group` where GroupName = #{GroupName}
+    </delete>
+</mapper>

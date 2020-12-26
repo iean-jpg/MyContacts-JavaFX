@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Pane prefHeight="500.0" prefWidth="600.0">
+            <children>
+                <Label layoutX="238.0" layoutY="32.0" text="好友信息">
+                    <font>
+                        <Font size="31.0" />
+                    </font>
+                </Label>
+                <Label layoutX="42.0" layoutY="109.0" text="姓名：" />
+                <Label layoutX="42.0" layoutY="169.0" text="手机：" />
+                <Label layoutX="42.0" layoutY="218.0" text="电话：" />
+                <Label layoutX="42.0" layoutY="273.0" text="地址：" />
+                <Label layoutX="42.0" layoutY="326.0" text="归属组：" />
+                <Label layoutX="42.0" layoutY="377.0" text="性别" />
+                <TextField layoutX="199.0" layoutY="104.0" />
+                <TextField layoutX="199.0" layoutY="154.0" />
+                <TextField layoutX="199.0" layoutY="213.0" />
+                <TextField layoutX="199.0" layoutY="268.0" />
+                <ChoiceBox layoutX="199.0" layoutY="321.0" prefWidth="150.0" />
+                <RadioButton layoutX="157.0" layoutY="377.0" mnemonicParsing="false" text="男" />
+                <RadioButton layoutX="342.0" layoutY="377.0" mnemonicParsing="false" text="母" />
+                <Button layoutX="102.0" layoutY="435.0" mnemonicParsing="false" text="修改" />
+                <Button layoutX="384.0" layoutY="435.0" mnemonicParsing="false" text="取消" />
+            </children>
+        </Pane>
+    </children>
+</VBox>

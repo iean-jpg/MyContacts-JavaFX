@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox fx:controller="controller.findFriendController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane prefHeight="407.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="234.0" layoutY="70.0" text="查询好友">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Label>
+            <Label  layoutX="49.0" layoutY="184.0" text="好友名：">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="FriendName" layoutX="190.0" layoutY="185.0" prefHeight="30.0" prefWidth="256.0" />
+            <Button fx:id="submit" layoutX="145.0" layoutY="296.0" mnemonicParsing="false" text="查询" />
+            <Button fx:id="quit" layoutX="366.0" layoutY="296.0" mnemonicParsing="false" text="取消" />
+         </children>
+      </Pane>
+   </children>
+</VBox>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.resetGroupController">
+    <children>
+        <Pane prefHeight="402.0" prefWidth="600.0">
+            <children>
+                <Label layoutX="239.0" layoutY="71.0" text="修改组">
+                    <font>
+                        <Font size="41.0" />
+                    </font>
+                </Label>
+                <Label layoutX="68.0" layoutY="190.0" text="组名">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="GroupName" layoutX="199.0" layoutY="191.0" />
+                <Button fx:id="reset" layoutX="250.0" layoutY="318.0" mnemonicParsing="false" onAction="#resetGroup" text="修改" />
+                <Button fx:id="quit" layoutX="366.0" layoutY="318.0" mnemonicParsing="false" onAction="#quit" text="退出" />
+            <Label layoutX="68.0" layoutY="146.0" prefHeight="29.0" prefWidth="83.0" text="组的id">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <TextField fx:id="GroupID" layoutX="199.0" layoutY="146.0" />
+            <Button fx:id="get" layoutX="126.0" layoutY="318.0" mnemonicParsing="false" onAction="#getGroup" text="查询" />
+            </children>
+        </Pane>
+    </children>
+</VBox>
